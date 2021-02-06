@@ -1,0 +1,55 @@
+{% extends 'base_layout.html' %} {% block body %}
+
+<body style="margin-top: 120px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+
+            </div>
+            <div class="col-md">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="alert alert-danger" role="alert" data-mdb-color="danger">
+                            {%for message in get_flashed_messages() %} {{ message }} {%endfor %}
+                        </div>
+                        <h5 class="card-title">Insert Book</h5>
+                        <form action="{{ request.path }}" method="post">
+                            <div class="form-outline mb-4">
+                                <input type="text" name="title" class="form-control" />
+                                <label for="title" class="form-label">Title</label>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input type="text" name="author" class="form-control" />
+                                <label for="author" class="form-label">Author</label>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input type="text" name="genre" class="form-control" />
+                                <label for="genre" class="form-label">Genre</label>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input type="text" name="height" class="form-control" />
+                                <label for="height" class="form-label">Height</label>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input type="text" name="publisher" class="form-control" />
+                                <label for="publisher" class="form-label">Publisher</label>
+                            </div>
+                            <div>
+                                <a href="/home" class="btn btn-danger">Cancel</a>
+                                <input type="submit" value="Submit" class="btn btn-success" " />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md ">
+
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+
+{% endblock %}

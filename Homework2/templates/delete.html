@@ -1,0 +1,40 @@
+{% extends 'base_layout.html' %} {% block body %}
+
+<head>
+    <title>Delete</title>
+</head>
+
+<body style="margin-top: 120px;">
+    <form action='' method="post">
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+
+                </div>
+                <div class="col-md">
+                    <div class="card">
+                        <div class="card-header">
+
+                            <h5> Are you sure to delete? </h5>
+
+                        </div>
+                        <div class="card-body">
+                            <h2>{{title.title}}</h2>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <div>
+                                <a href="/home" class="btn btn-danger">Cancel</a>
+                                <input type="submit" value="YES" class="btn btn-success" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+{% endblock %}
